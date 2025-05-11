@@ -303,13 +303,17 @@ footer a:hover{
 /* Devices under 768px (tablets and phones) */
 @media screen and (max-width: 768px) {
 
-    nav {
-        flex-direction: column;
+    .hero-header {
+        height: 200px;
     }
 
-    nav a {
-        font-size: 1.6rem;
-        padding: 1.2rem;
+    .title h1 {
+        font-size: 5rem;
+    }
+
+    .title h2 {
+        font-size: 2rem;
+        letter-spacing: 1.5rem;
     }
 
     .card {
