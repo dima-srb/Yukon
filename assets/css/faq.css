@@ -213,6 +213,21 @@ footer a:hover{
 
 /* ---------- Responsive for phones and small devices ---------- */
 @media (max-width: 480px) {
+
+    /* Hero Header */
+    .hero-header {
+        height: 180px;
+    }
+
+    .title h1 {
+        font-size: 4rem;
+    }
+
+    .title h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1rem;
+    }
+
     h1 {
         font-size: 4rem;
     }

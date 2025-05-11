@@ -309,3 +309,19 @@ footer a:hover{
         font-size: 1.4rem;
     }
 }
+
+@media (max-width: 480px) {
+    /* Hero Header */
+    .hero-header {
+        height: 180px;
+    }
+
+    .title h1 {
+        font-size: 4rem;
+    }
+
+    .title h2 {
+        font-size: 1.8rem;
+        letter-spacing: 1rem;
+    }
+}
