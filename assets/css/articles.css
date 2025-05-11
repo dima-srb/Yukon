@@ -75,7 +75,7 @@ nav a:hover{
 
 .hero-header {
     height: 250px;
-    background-image: url(/assets/img/home/header-background.png);
+    background-image: url(../img/home/header-background.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; 
