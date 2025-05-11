@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    /* Color pallette */
+    --lavender: #D7DAE5;
+    --brown: #9C6615;
+    --blue: #3F88C5;
+    --pear: #CFD11A;
+    --mikado: #FFC53A;
+    --black: #000000;
+    --white: #ffffff;
+    --cloud: #edece8;
+    --hover-color: rgba(255, 255, 255, 0.5);
+}
+
+html{
+    font-size: 10px;
+    color: var(--black);
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    letter-spacing: .2rem;
+
+    scroll-behavior: smooth;
+}
+
+/* ---------- Heading ---------- */
+
+h1{
+    font-family: "Montserrat", 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 8rem;
+    letter-spacing: .5rem;
+}
+
+h2{
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: 1.9rem;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    background-color: var(--lavender);
+
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    
+    width: auto;
+}
+
+nav a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--lavender);
+
+    text-align: center;
+    padding: 1rem 0;
+    flex: 1;
+
+    transition: background-color .3s;
+}
+
+nav a:hover{
+    background-color: aliceblue;
+}
+
+.hero-header {
+    height: 250px;
+    background-image: url(/assets/img/home/header-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    overflow: hidden;
+    text-align: center;
+}
+
+.title{
+    margin-top: 6rem;
+}
+
+/* ---------- Articles ---------- */
+
+/* Layout of all articles */
+.articles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 6rem;
+}
+
+/* First three grid items - text / aesthetics */
+.articles-intro{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+}
+
+.articles-intro hr{
+    width: 80%;
+    border: 1px solid black;
+}
+
+.articles-intro p{
+    margin: 1rem 8rem;
+
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+/* Single article rules */
+article{
+    position: relative;
+    overflow: hidden;
+    height: 55rem;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay for mouse hover on article */
+.overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0.33);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    padding: 2rem;
+
+    /* Text */
+    font-size: 1.8rem;
+    letter-spacing: .3rem;
+}
+
+/* Article text for overlay */
+.article-subtitle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.article-summary{
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+
+    margin-top: 2rem;
+}
+
+article time{
+    margin-left: .8rem;
+}
+
+article .overlay:hover{
+    opacity: 1;
+}
+
+/* ---------- Button to more articles ---------- */
+
+.button-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-section hr{
+    border: 1px solid var(--brown);
+    margin: auto 2rem;
+    width: 80%;
+}
+
+button{
+    margin: 4rem;
+    padding: 2rem;
+
+    border: none;
+    background-color: var(--brown);
+    color: var(--white);
+
+    width: 30rem;
+    
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 100;
+    letter-spacing: .3rem;
+    
+    transition: background-color .3s;
+}
+
+button:hover{
+    background-color: var(--mikado);
+    color:var(--black)
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 3rem;
+}
+
+footer h3{
+    font-family: "Montserrat", 'Courier New', Courier, monospace;
+    font-weight: 300;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+}
+
+footer p{
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 3rem;
+
+    transition: color .3s;
+}
+
+footer a:hover{
+    color: var(--mikado);
+}
+
+/* ---------- Media Queries ---------- */
+
+@media (max-width: 768px) {
+    /* ---------- Articles Layout ---------- */
+    .articles{
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .articles-intro p{
+        margin: 1rem 2rem;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+    /* Single article */
+    article{
+        height: 30rem;
+    }
+
+    article img{
+        object-position: center;
+        height: 30rem;
+    }
+
+    .overlay{
+        height: 34rem;
+        width: 100%;
+        opacity: 1;
+    }
+
+    .article-summary{
+        margin-bottom: 3rem;
+    }
+
+    /* Button section */
+    .button-section button{
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    /* Footer */
+    footer h3{
+        font-size: 2.5rem;
+    }
+
+    footer p{
+        font-size: 1.4rem;
+    }
+}
